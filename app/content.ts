@@ -7,7 +7,7 @@ export const profile = {
   name: "Haardik S Sagar",
   handle: "haardik",
   tagline: "building things, one late night at a time.",
-  email: "hello@haardiksagar.com", // placeholder — replace with your real email
+  email: "haardiiksagar@gmail.com", // placeholder — replace with your real email
 };
 
 export const socials = [
