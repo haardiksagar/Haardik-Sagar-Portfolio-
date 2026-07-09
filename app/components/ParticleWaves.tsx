@@ -22,7 +22,7 @@ export default function ParticleWaves() {
       cameraHeight: 82,
       cameraDistance: 320,
       maxDpr: 1.75,
-      glow: 1.2,
+      glow: 2.6,
     };
 
     let gl: WebGLRenderingContext | null = null;
