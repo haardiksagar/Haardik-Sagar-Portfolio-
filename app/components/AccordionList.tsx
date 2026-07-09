@@ -12,7 +12,10 @@ export default function AccordionList({ items }: { items: Item[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="divide-y divide-line/70 border-y border-line/70">
+    //border-y applies the border to both the top and bottom (y axis).
+    // border-b applies the border only to the bottom.
+    /*<div className="divide-y divide-neutral-800 border-y border-neutral-800">*/
+    <div className="divide-y divide-neutral-800 border-b border-neutral-800">
       {items.map((item, i) => {
         const isOpen = openIndex === i;
         return (

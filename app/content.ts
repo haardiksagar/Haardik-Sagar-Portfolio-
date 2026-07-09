@@ -56,19 +56,19 @@ export const previously = [
 
 export const projects = [
   {
-    name: "Project One",
+    name: "PeerLink (2025)",
     role: "Creator",
-    detail: "A short description of the project and the problem it solves.",
+    detail: "A framework-less peer-to-peer backend built from scratch to explore low-level networking, custom HTTP parsing, and concurrent TCP file transfers.",
   },
   {
-    name: "Project Two",
-    role: "Contributor",
-    detail: "A short description of the project and your role in it.",
+    name: "Trimly (2026)",
+    role: "Creator",
+    detail: "A production-style URL shortening service featuring stateless authentication, rate limiting, analytics, and scalable backend architecture.",
   },
   {
-    name: "Project Three",
-    role: "Lead",
-    detail: "A short description of the project and what makes it interesting.",
+    name: "OmniRAG-Engine",
+    role: "Creator",
+    detail: "A fully local, privacy-first RAG engine with fault-tolerant document ingestion and hybrid vector search, built without relying on external AI APIs.",
   },
 ];
 
