@@ -30,10 +30,10 @@ export const currently = {
 
 export const about = {
   eyebrow: "About Me",
-  intro: "I'm a <strong class=\"text-emerald-400 font-medium\">third-year Computer Science student</strong> at <strong class=\"text-emerald-400 font-medium\">IIIT Nagpur</strong>. I like taking things apart to understand how they work. Most of my learning comes from rebuilding technologies instead of treating them as black boxes. That curiosity has led me to build everything from framework-less networking systems to fully local AI infrastructure. I'm particularly interested in <strong class=\"text-emerald-400 font-medium\">backend engineering</strong>, <strong class=\"text-emerald-400 font-medium\">distributed systems</strong>, and building reliable developer platforms that solve real-world problems.",
+  intro: "I am a <strong class=\"text-gold font-medium\">third-year Computer Science student</strong> at <strong class=\"text-gold font-medium\">IIIT Nagpur</strong>. I like taking things apart to understand how they work. Most of my learning comes from rebuilding technologies instead of treating them as black boxes. I am particularly interested in <strong class=\"text-gold font-medium\">backend engineering</strong>, <strong class=\"text-gold font-medium\">distributed systems</strong>, and building reliable developer platforms that solve real-world problems.",
   techIntro: "Here are some technologies I have been working with:",
   outro: "In my free time, I'm nerdy about tech gadgets, love literary fiction, and play way too many battle royale games. Oh, I make content too.",
-  image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=500&auto=format&fit=crop" // Placeholder image
+  image: "/me.jpg"
 };
 
 export const previously = [

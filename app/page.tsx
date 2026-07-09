@@ -15,16 +15,16 @@ export default function Home() {
 
       <AboutMe />
 
+      <section className="mt-16">
+        <SectionLabel>Projects</SectionLabel>
+        <AccordionList items={projects} />
+      </section>
+
       <Currently />
 
       <section className="mt-16">
         <SectionLabel>Previously</SectionLabel>
         <AccordionList items={previously} />
-      </section>
-
-      <section className="mt-16">
-        <SectionLabel>Projects</SectionLabel>
-        <AccordionList items={projects} />
       </section>
 
       <section className="mt-16">

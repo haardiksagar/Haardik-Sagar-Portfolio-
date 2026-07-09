@@ -4,7 +4,12 @@ import SectionLabel from "./SectionLabel";
 export default function AboutMe() {
   return (
     <section className="mt-16">
-      <SectionLabel>{about.eyebrow}</SectionLabel>
+      <div className="flex items-center gap-4 mb-6">
+        <h2 className="font-display text-3xl text-paper lowercase">
+          / {about.eyebrow}
+        </h2>
+        <span className="h-px flex-1 bg-line" />
+      </div>
 
       <div className="mt-8 flex flex-col-reverse md:flex-row gap-10 md:gap-14 items-start">
         {/* Text Content */}
