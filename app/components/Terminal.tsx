@@ -1,11 +1,12 @@
 import { profile, stack } from "../content";
 
 const lines: [string, string][] = [
-  ["languages", stack.languages],
+  ["Languages", stack.Languages],
   [" AI Skills & Tools", stack.AI_Skills_Tools],
-  ["frontend", stack.frontend],
-  ["backend", stack.backend],
-  ["infra", stack.infra],
+  ["Frontend", stack.Frontend],
+  ["Frameworks & Libraries:", stack.Frameworks_Libraries],
+  ["Developer_Tools", stack.Developer_Tools],
+  ["Databases", stack.Databases]
 ];
 
 export default function Terminal() {

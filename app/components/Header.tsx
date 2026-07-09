@@ -9,7 +9,7 @@ export default function Header() {
   const [days, setDays] = useState(0);
 
   useEffect(() => {
-    const target = 1286;
+    const target = 686;
     const duration = 2000;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
@@ -87,7 +87,7 @@ export default function Header() {
 
       <ThemeToggle />
       
-      <div className="mt-12 font-mono text-sm sm:text-[15px] text-muted tracking-wide animate-fadeUp" style={{ animationDelay: '0.2s' }}>
+      <div className="mt-12 font-mono text-lg sm:text-xl text-muted tracking-wide animate-fadeUp" style={{ animationDelay: '0.2s' }}>
         i've been building things for <span className="text-paper font-semibold">{days.toLocaleString()}</span> days.
       </div>
     </header>
