@@ -28,20 +28,13 @@ export const currently = {
     "A short line about what you're building right now and why it matters to you.",
 };
 
-// export const about = {
-//   eyebrow: "About Me",
-//   intro: "I am currently a <strong class=\"text-emerald-400 font-medium\">Software Engineer</strong> at <strong class=\"text-emerald-400 font-medium\">Google</strong>, where I help build autobidder models that make Google Search money. Previously, I was at <strong class=\"text-emerald-400 font-medium\">Amazon</strong> and <strong class=\"text-emerald-400 font-medium\">Pinterest</strong>.",
-//   techIntro: "Here are some technologies I have been working with:",
-//   technologies: [
-//     "Python",
-//     "Typescript",
-//     "React.js",
-//     "Java",
-//     "Javascript ES6+"
-//   ],
-//   outro: "In my free time, I'm nerdy about tech gadgets, love literary fiction, and play way too many battle royale games. Oh, I make content too.",
-//   image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=500&auto=format&fit=crop" // Placeholder image
-// };
+export const about = {
+  eyebrow: "About Me",
+  intro: "I'm a <strong class=\"text-emerald-400 font-medium\">third-year Computer Science student</strong> at <strong class=\"text-emerald-400 font-medium\">IIIT Nagpur</strong>. I like taking things apart to understand how they work. Most of my learning comes from rebuilding technologies instead of treating them as black boxes. That curiosity has led me to build everything from framework-less networking systems to fully local AI infrastructure. I'm particularly interested in <strong class=\"text-emerald-400 font-medium\">backend engineering</strong>, <strong class=\"text-emerald-400 font-medium\">distributed systems</strong>, and building reliable developer platforms that solve real-world problems.",
+  techIntro: "Here are some technologies I have been working with:",
+  outro: "In my free time, I'm nerdy about tech gadgets, love literary fiction, and play way too many battle royale games. Oh, I make content too.",
+  image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=500&auto=format&fit=crop" // Placeholder image
+};
 
 export const previously = [
   {

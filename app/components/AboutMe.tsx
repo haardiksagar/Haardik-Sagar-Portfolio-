@@ -10,19 +10,6 @@ export default function AboutMe() {
         {/* Text Content */}
         <div className="flex-1 space-y-5 text-[15px] leading-relaxed text-muted max-w-[60ch]">
           <p dangerouslySetInnerHTML={{ __html: about.intro }} />
-
-          <p>{about.techIntro}</p>
-
-          <ul className="grid grid-cols-2 gap-y-2 gap-x-4 font-mono text-[13px] text-muted mt-4 mb-4">
-            {about.technologies.map((tech) => (
-              <li key={tech} className="flex items-center gap-2.5">
-                <span className="text-emerald-400 text-[10px]">▶</span>
-                {tech}
-              </li>
-            ))}
-          </ul>
-
-          <p>{about.outro}</p>
         </div>
 
         {/* Image */}
