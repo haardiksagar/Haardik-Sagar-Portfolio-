@@ -1,4 +1,5 @@
 import { profile, socials } from "../content";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -26,6 +27,7 @@ export default function Header() {
           </a>
         ))}
       </nav>
+      <ThemeToggle />
     </header>
   );
 }

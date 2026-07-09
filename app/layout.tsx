@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Haardik S Sagar",
@@ -22,10 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="font-body bg-ink text-paper antialiased">
-        {/* {children} is where Next.js automatically injects your page.tsx content */}
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {/* {children} is where Next.js automatically injects your page.tsx content */}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
