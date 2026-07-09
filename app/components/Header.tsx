@@ -1,11 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { profile, socials } from "../content";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [msgOpen, setMsgOpen] = useState(false);
+  const [days, setDays] = useState(0);
+
+  useEffect(() => {
+    const target = 1286;
+    const duration = 2000;
+    const frameRate = 1000 / 60;
+    const totalFrames = Math.round(duration / frameRate);
+    let frame = 0;
+
+    const easeOutExpo = (t: number) => {
+      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+    };
+
+    const counter = setInterval(() => {
+      frame++;
+      const progress = easeOutExpo(frame / totalFrames);
+      setDays(Math.round(target * progress));
+
+      if (frame === totalFrames) {
+        clearInterval(counter);
+      }
+    }, frameRate);
+
+    return () => clearInterval(counter);
+  }, []);
 
   return (
     <header className="animate-fadeUp">
@@ -61,6 +86,10 @@ export default function Header() {
       </p>
 
       <ThemeToggle />
+      
+      <div className="mt-12 font-mono text-sm sm:text-[15px] text-muted tracking-wide animate-fadeUp" style={{ animationDelay: '0.2s' }}>
+        i've been building things for <span className="text-paper font-semibold">{days.toLocaleString()}</span> days.
+      </div>
     </header>
   );
 }
