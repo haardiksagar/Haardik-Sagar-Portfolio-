@@ -16,13 +16,13 @@ export default function ParticleWaves() {
       step: 6,
       amplitude: 22,
       baseHeight: -42,
-      basePointSize: 28,
+      basePointSize:28,
       speed: 0.6,
       fov: 52,
       cameraHeight: 82,
       cameraDistance: 320,
       maxDpr: 1.75,
-      glow: 3.2,
+      glow: 1.2,
     };
 
     let gl: WebGLRenderingContext | null = null;
@@ -268,7 +268,7 @@ export default function ParticleWaves() {
       const r = clamp01(lerp(start[0], end[0], mixRatio) * fade);
       const g = clamp01(lerp(start[1], end[1], mixRatio) * (0.92 + 0.08 * Math.sin(clampedDepth * 6)));
       const b = clamp01(lerp(start[2], end[2], mixRatio) * (0.85 + 0.12 * Math.cos(clampedT * 5)));
-      const alpha = clamp01(0.9 + (1 - clampedDepth) * 0.1);
+      const alpha = clamp01(0.6 + (1 - clampedDepth) * 0.2);
 
       return [r, g, b, alpha];
     }
