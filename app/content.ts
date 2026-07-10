@@ -33,7 +33,7 @@ export const about = {
   intro: "I am a <strong class=\"text-gold font-medium\">third-year Computer Science student</strong> at <strong class=\"text-gold font-medium\">IIIT Nagpur</strong>. I like taking things apart to understand how they work. Most of my learning comes from rebuilding technologies instead of treating them as black boxes. I am particularly interested in <strong class=\"text-gold font-medium\">backend engineering</strong>, <strong class=\"text-gold font-medium\">distributed systems</strong>, and building reliable developer platforms that solve real-world problems.",
   techIntro: "Here are some technologies I have been working with:",
   outro: "In my free time, I'm nerdy about tech gadgets, love literary fiction, and play way too many battle royale games. Oh, I make content too.",
-  image: "/me.jpg"
+  image: "me.jpg"
 };
 
 export const previously = [
@@ -59,7 +59,7 @@ export const projects = [
     name: "PeerLink (2025)",
     role: "Creator",
     detail: "A framework-less peer-to-peer backend built from scratch to explore low-level networking, custom HTTP parsing, and concurrent TCP file transfers.",
-    image: "/assets/peerLink.png",
+    image: "assets/peerLink.png",
     github: "https://github.com/haardiksagar/Peer-Link",
     link: "project-1h72y.vercel.app",
     techStack: "Java(Core/Vanilla)"
@@ -68,7 +68,7 @@ export const projects = [
     name: "Trimly (2026)",
     role: "Creator",
     detail: "A production-style URL shortening service featuring stateless authentication, rate limiting, analytics, and scalable backend architecture.",
-    image: "/assets/Trimly.png",
+    image: "assets/Trimly.png",
     github: "https://github.com/haardiksagar",
     link: "https://github.com",
     techStack: "Spring Boot | Supabase | Vite | Vanilla JS"
