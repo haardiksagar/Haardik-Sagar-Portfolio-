@@ -13,23 +13,34 @@ export default function Header() {
     const duration = 2000;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
-    let frame = 0;
+    
+    let counterInterval: NodeJS.Timeout;
 
-    const easeOutExpo = (t: number) => {
-      return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+    const startCounter = () => {
+      let frame = 0;
+      const easeOutExpo = (t: number) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+
+      counterInterval = setInterval(() => {
+        frame++;
+        const progress = easeOutExpo(frame / totalFrames);
+        setDays(Math.round(target * progress));
+
+        if (frame >= totalFrames) {
+          clearInterval(counterInterval);
+        }
+      }, frameRate);
     };
 
-    const counter = setInterval(() => {
-      frame++;
-      const progress = easeOutExpo(frame / totalFrames);
-      setDays(Math.round(target * progress));
+    if (typeof window !== 'undefined' && (window as any).introFinished) {
+      startCounter();
+    } else {
+      window.addEventListener('introComplete', startCounter, { once: true });
+    }
 
-      if (frame === totalFrames) {
-        clearInterval(counter);
-      }
-    }, frameRate);
-
-    return () => clearInterval(counter);
+    return () => {
+      if (counterInterval) clearInterval(counterInterval);
+      window.removeEventListener('introComplete', startCounter);
+    };
   }, []);
 
   return (

@@ -35,6 +35,8 @@ export default function Intro({
   useEffect(() => {
     if (once && typeof window !== 'undefined' && sessionStorage.getItem('intro-played')) {
       setShouldRender(false);
+      if (typeof window !== 'undefined') (window as any).introFinished = true;
+      window.dispatchEvent(new Event('introComplete'));
       onComplete?.();
       return;
     }
@@ -47,6 +49,10 @@ export default function Intro({
     const finish = () => {
       if (once) sessionStorage.setItem('intro-played', 'true');
       setShouldRender(false);
+      if (typeof window !== 'undefined') {
+        (window as any).introFinished = true;
+        window.dispatchEvent(new Event('introComplete'));
+      }
       onComplete?.();
     };
 
