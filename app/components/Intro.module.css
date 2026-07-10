@@ -75,6 +75,9 @@
 
 .letter {
   display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(110%);
   will-change: transform;
 }
 
