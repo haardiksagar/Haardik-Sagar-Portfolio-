@@ -99,3 +99,8 @@ export const achievements = [
   { title: "Achievement Three", subtitle: "Brief context or organization" },
   { title: "Achievement Four", subtitle: "Brief context or organization" },
 ];
+
+export const contact = {
+  heading: "Let's Build Something",
+  message: "I'm currently looking for Summer 2026 internships. If you're working on hard problems in distributed systems, let's chat.",
+};

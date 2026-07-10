@@ -7,6 +7,7 @@ import FadeInSection from "./components/FadeInSection";
 import Terminal from "./components/Terminal";
 import Achievements from "./components/Achievements";
 import Footer from "./components/Footer";
+import ContactCTA from "./components/ContactCTA";
 import SectionLabel from "./components/SectionLabel";
 import { previously, projects } from "./content";
 
@@ -40,6 +41,10 @@ export default function Home() {
         <SectionLabel>Achievements</SectionLabel>
         <Achievements />
       </section> */}
+
+      <section className="mt-20">
+        <ContactCTA />
+      </section>
 
       <Footer />
     </main>
