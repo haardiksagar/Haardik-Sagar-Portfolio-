@@ -24,7 +24,7 @@ export default function Intro({
   once = true,
   onComplete,
 }: IntroProps) {
-  const [mounted, setMounted] = useState(false);
+  const [shouldRender, setShouldRender] = useState(true);
   const overlayRef = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLSpanElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
@@ -35,19 +35,19 @@ export default function Intro({
   // Decide once, on mount, whether the intro should play at all.
   useEffect(() => {
     if (once && typeof window !== 'undefined' && sessionStorage.getItem('intro-played')) {
+      setShouldRender(false);
       onComplete?.();
       return;
     }
-    setMounted(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (!mounted || !overlayRef.current) return;
+    if (!shouldRender || !overlayRef.current) return;
 
     const finish = () => {
       if (once) sessionStorage.setItem('intro-played', 'true');
-      overlayRef.current?.remove();
+      setShouldRender(false);
       onComplete?.();
     };
 
@@ -95,13 +95,13 @@ export default function Intro({
     return () => {
       tl.kill();
     };
-  }, [mounted, counterDuration, once]);
+  }, [shouldRender, counterDuration, once]);
 
   const handleSkip = () => {
     tlRef.current?.progress(1);
   };
 
-  if (!mounted) return null;
+  if (!shouldRender) return null;
 
   return (
     <div ref={overlayRef} className={styles.overlay}>
