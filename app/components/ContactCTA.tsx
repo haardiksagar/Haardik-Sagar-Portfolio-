@@ -4,7 +4,7 @@ import FadeInSection from "./FadeInSection";
 export default function ContactCTA() {
   return (
     <FadeInSection>
-      <div className="flex flex-col items-center justify-center text-center px-6 py-12 mt-4 mb-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl relative overflow-hidden">
+      <div className="flex flex-col items-center justify-center text-center px-6 py-12 mt-4 mb-8 bg-white/5 backdrop-blur-sm border border-neutral-800 rounded-3xl relative overflow-hidden">
         {/* Subtle glow effect behind */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm h-full bg-gold/10 blur-[80px] -z-10 rounded-full pointer-events-none" />
         
