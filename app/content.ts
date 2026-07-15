@@ -102,5 +102,5 @@ export const achievements = [
 
 export const contact = {
   heading: "Let's Build Something",
-  message: "I'm currently looking for 2026 internships. If you're working on hard problems in distributed systems, let's chat.",
+  message: "I'm currently looking for 2026 Junior Engineer/ internships role. If you're working on hard problems in distributed systems, let's chat.",
 };
